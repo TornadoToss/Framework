@@ -17,6 +17,7 @@ void SoundObject::loadSound(std::string filename)
 void SoundObject::setMaxConcurrent(int maxConcurrent)
 {
 	if (maxConcurrent < 1) maxConcurrent = 1;
+	max_playing = maxConcurrent;
 
 	sf::Sound originalSound(*sounds[0]);
 	sounds.clear();
